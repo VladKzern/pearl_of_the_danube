@@ -1,0 +1,53 @@
+.aboutSection {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/img/4.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.contentContainer {
+  max-width: 600px;
+  margin-left: 80px;
+  background: rgba(28, 30, 31, 0.8);
+  padding: 32px;
+  border-radius: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.scrollableText {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) transparent;
+}
+
+.scrollableText::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollableText::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 4px;
+}
+
+.scrollableText p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}

@@ -1,0 +1,33 @@
+.heroSection {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/img/3.webp');
+  background-size: cover;
+  background-position: 90% 10%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.heroSection :global(header) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.heroContent {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}

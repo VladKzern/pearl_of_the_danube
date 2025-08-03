@@ -1,0 +1,18 @@
+:root {
+  --black: #1c1e1f;
+  --white-brown: #fbc88e;
+  --red: #a41215;
+  --brown: #89422a;
+  --grey: #797979; 
+
+  --font-main: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  font-family: var(--font-main);
+}
+
+html {
+  scroll-behavior: smooth;
+}

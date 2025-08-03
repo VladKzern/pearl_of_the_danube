@@ -1,0 +1,110 @@
+.headerContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 64px;
+  margin-top: 24px;
+}
+
+.brandContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  font-size: 20px;
+  color: #fff;
+}
+
+.brandLine {
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+.mainTitleLogo {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.nav {
+  display: flex;
+  gap: 64px;
+  height: 40px;
+}
+
+.navItem {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0 24px;
+}
+
+.dropbtn {
+  background: none;
+  
+  border: none;
+  
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--black);
+  width: 100%;
+  z-index: 1000;
+  border-radius: 6px;
+  padding: 8px 0;
+}
+
+.dropdownContent a {
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a.navItem {
+  font-size: 16px;
+}
+
+.dropdownContent a:hover {
+  background-color: #a41215;
+}
+
+.dropdown:hover .dropdownContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  color: #fff;
+}
+
+.phoneNumber {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.locationLink:hover {
+  text-decoration: underline;
+}
