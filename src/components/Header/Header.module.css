@@ -11,34 +11,34 @@
 }
 
 .brandContainer {
-  display: flex;
+  
   flex-direction: column;
   align-items: center;
   line-height: 1;
-  font-size: 20px;
+  font-size: 14px;
   color: #fff;
+  display: none;
 }
 
 .brandLine {
-  font-size: 20px;
+  font-size: 10px;
   font-weight: bold;
-  
+
 }
 
 .mainTitleLogo {
-  font-size: 60px;
+  font-size: clamp(28px, 4vw + 1rem, 40px);
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 .nav {
   display: flex;
-  gap: 64px;
   height: 40px;
 }
 
 .navItem {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
 }
@@ -46,16 +46,16 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  padding: 0 24px;
+  
 }
 
 .dropbtn {
   background: none;
-  
+
   border: none;
-  
+
   cursor: pointer;
-  
+
   display: flex;
   align-items: center;
   gap: 6px;
@@ -81,7 +81,7 @@
 }
 
 .dropdownContent a.navItem {
-  font-size: 16px;
+  font-size: 0.6rem;
 }
 
 .dropdownContent a:hover {
@@ -101,10 +101,82 @@
 }
 
 .phoneNumber {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: bold;
+}
+
+.locationLink {
+  color: #fff
 }
 
 .locationLink:hover {
   text-decoration: underline;
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.activeArrow {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+
+  .headerContainer {
+    flex-wrap: wrap;
+    padding: 0 32px;
+  }
+
+  .nav {
+    gap: clamp(10px, 5vw, 20px);
+  }
+
+  .phoneNumber {
+    font-size: 12px;
+  }
+
+  .locationLink {
+    font-size: 12px;
+  }
+
+  .locationContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-basis: 100%;
+    margin-top: 8px;
+    justify-content: space-around;
+  }
+
+  .mainDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigationContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+
+}
+
+@media (min-width: 1440px) {
+  .nav {
+    gap: clamp(26px, 4vw, 96px);
+  }
+
+  .brandContainer {
+    display: flex;
+  }
+
+  .navigationContainer {
+    width:fit-content;
+  }
+
+  .locationContainer {
+    justify-content: space-between;
+  }
 }
