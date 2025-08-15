@@ -12,8 +12,22 @@
 html,
 body {
   font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  background-color: #1c1e1f;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    transform: scale(1);
+    transform-origin: top center;
+    
+  }
 }

@@ -43,6 +43,11 @@ export default function NavbarDarkExample() {
             <div></div>
           </div>
 
+          <div className={css.mobileBrandContainer}>
+            <div className={css.mobileMainTitleLogo}>ПЕРЛИНА</div>
+            <div className={css.mobileMainTitleLogo}>ДУНАЮ</div>
+          </div>
+
           <div className={css.infoContainer}>
             <div className={css.phoneNumbers}>
               <p className={css.phoneNumber}> + 38 (067)-818-18-37</p>

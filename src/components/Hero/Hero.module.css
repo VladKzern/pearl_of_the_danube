@@ -3,9 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../../assets/img/3.webp');
+  background-image: url('../../assets/img/mobileHero@2x.webp');
   background-size: cover;
-  background-position: 90% 10%;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -30,4 +30,20 @@
   padding: 2rem;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    background-image: url('../../assets/img/tabletHero@2x.webp');
+    background-position: center;
+  }
+}
+
+/* Мобілки */
+@media (min-width: 1440px) {
+  .heroSection {
+    background-image: url('../../assets/img/3.webp');
+    background-position: center;
+    background-size: cover;
+  }
 }
