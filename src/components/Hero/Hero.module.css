@@ -1,5 +1,6 @@
 .heroSection {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,14 +11,6 @@
   display: flex;
   flex-direction: column;
   z-index: 0;
-}
-
-.heroSection :global(header) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
 }
 
 .heroContent {
@@ -69,5 +62,19 @@
 
   .textTitle {
     font-size: 20px;
+  }
+}
+
+@media (min-height: 340px) and (max-height: 420px) {
+  .mainHero {
+    font-size: 16px;
+  }
+
+  .textTitle {
+    font-size: 12px;
+  }
+
+  .heroContent {
+    padding: 1rem;
   }
 }
