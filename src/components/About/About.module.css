@@ -14,9 +14,7 @@
 }
 
 .contentContainer {
-  max-width: 600px;
-  max-height: 800px;
-  margin-left: 80px;
+  max-height: 400px;
   background: rgba(28, 30, 31, 0.8);
   padding: 32px;
   border-radius: 16px;
@@ -52,4 +50,11 @@
 .scrollableText p {
   margin-bottom: 16px;
   line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .contentContainer {
+    max-width: 500px;
+    margin-left: 32px;
+  }
 }

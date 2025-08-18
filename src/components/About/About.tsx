@@ -3,7 +3,7 @@ import css from './About.module.css';
 export default function About() {
   return (
     <section className={css.aboutSection} id="about">
-      <div className={css.contentContainer}>
+      <div className={`${css.contentContainer} container`}>
         <h2 className={css.title}>Про комплекс</h2>
         <div className={css.scrollableText}>
           <p>
