@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
+import { FaPhoneAlt } from 'react-icons/fa';
 import css from './Header.module.css';
 
 export default function NavbarDarkExample() {
@@ -50,8 +51,8 @@ export default function NavbarDarkExample() {
 
           <div className={css.infoContainer}>
             <div className={css.phoneNumbers}>
-              <p className={css.phoneNumber}> + 38 (067)-818-18-37</p>
-              <p className={css.phoneNumber}> + 38 (050)-336-33-33</p>
+              <p className={css.phoneNumber}> <FaPhoneAlt className={css.phoneIcon} /> + 38 (067)-818-18-37</p>
+              <p className={css.phoneNumber}> <FaPhoneAlt className={css.phoneIcon} /> + 38 (050)-336-33-33</p>
               <div className={css.locationContainer}>
                 <a href="#location" className={css.locationLink}>
                   вул. Хмельницького Богдана, 14, м. Кілія
@@ -115,8 +116,8 @@ export default function NavbarDarkExample() {
 
           <div className={css.infoContainer}>
             <div className={css.phoneNumbers}>
-              <p className={css.phoneNumber}> + 38 (067)-818-18-37</p>
-              <p className={css.phoneNumber}> + 38 (050)-336-33-33</p>
+              <p className={css.phoneNumber}> <FaPhoneAlt className={css.phoneIcon} /> + 38 (067)-818-18-37</p>
+              <p className={css.phoneNumber}> <FaPhoneAlt className={css.phoneIcon} /> + 38 (050)-336-33-33</p>
               <div className={css.locationContainer}>
                 <a href="#location" className={css.locationLink}>
                   вул. Хмельницького Богдана, 14, м. Кілія

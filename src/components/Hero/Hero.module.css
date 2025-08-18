@@ -20,7 +20,7 @@
   color: white;
   z-index: 2;
   position: static;
-  padding: 2rem;
+  padding: 1rem;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 12px;
 }
