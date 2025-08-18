@@ -248,6 +248,7 @@
 @media (max-width: 767px) {
   .burger {
     display: flex;
+    margin-right: 20px;
   }
 
   .nav {
@@ -282,6 +283,22 @@
 
   .locationContainer {
     align-items: flex-end;
+  }
+
+  .mobileBrandContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .logoPhoneContainer {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
   }
 }
 
