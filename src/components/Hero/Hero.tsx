@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className={css.heroSection} id="home">
       <div className={css.heroContent}>
-        <h1>Ласкаво просимо до Перлини Дунаю</h1>
-        <p>Ваш дім — наша турбота</p>
+        <h1 className={css.mainHero}>Ласкаво просимо до Перлини Дунаю!</h1>
+        <p className={css.textTitle}>Ваш дім — наша турбота.</p>
       </div>
     </section>
   );

@@ -26,10 +26,18 @@
   text-align: center;
   color: white;
   z-index: 2;
-  position: relative;
+  position: static;
   padding: 2rem;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 12px;
+}
+
+.mainHero {
+  font-size: 14px;
+}
+
+.textTitle {
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {
@@ -37,13 +45,29 @@
     background-image: url('../../assets/img/tabletHero@2x.webp');
     background-position: center;
   }
+
+  .mainHero {
+    font-size: 20px;
+  }
+
+  .textTitle {
+    font-size: 16px;
+  }
 }
 
-/* Мобілки */
+
 @media (min-width: 1440px) {
   .heroSection {
     background-image: url('../../assets/img/3.webp');
     background-position: center;
     background-size: cover;
+  }
+
+  .mainHero {
+    font-size: 28px;
+  }
+
+  .textTitle {
+    font-size: 20px;
   }
 }
