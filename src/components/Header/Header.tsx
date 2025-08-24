@@ -10,7 +10,7 @@ export default function NavbarDarkExample() {
 
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.innerWidth < 768;
+      const mobile = window.innerWidth < 926;
       setIsMobile(mobile);
 
       if (!mobile) {

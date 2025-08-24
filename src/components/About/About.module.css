@@ -8,7 +8,6 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   z-index: 1;
 }
@@ -52,7 +51,7 @@
   line-height: 1.6;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 925px) {
   .contentContainer {
     max-width: 500px;
     margin-left: 32px;

@@ -1,6 +1,6 @@
 .headerContainer {
   position: absolute;
-  max-width: 375px;
+  
   top: 0;
   left: 0;
   right: 0;
@@ -47,7 +47,7 @@
 }
 
 .nav {
-  display: flex;
+  display: none;
   height: 40px;
 }
 
@@ -153,6 +153,7 @@
   width: 30px;
   height: 25px;
   z-index: 2000;
+  margin-right: 20px;
 }
 
 .burger div {
@@ -180,6 +181,7 @@
 
 /* Мобільне меню */
 .mobileMenu {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -223,7 +225,7 @@
 
 .mobileMenu a {
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: none;
 }
 
@@ -232,7 +234,7 @@
 }
 
 .mobileMenu a.aSecond {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .mobileMenuInner {
@@ -245,19 +247,15 @@
   gap: 16px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 924px) {
+
   .burger {
     display: flex;
     margin-right: 20px;
   }
 
-  .nav {
-    display: none;
-  }
-
-  .mobileMenu {
+  .mobileBrandContainer {
     display: flex;
-    
   }
 
   .mobileHeaderContainer {
@@ -302,7 +300,15 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 925px) {
+
+  .burger {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
 
   .headerContainer {
     flex-wrap: wrap;
@@ -311,7 +317,8 @@
   }
 
   .nav {
-    gap: clamp(10px, 5vw, 20px);
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
   }
 
   .phoneNumber {
