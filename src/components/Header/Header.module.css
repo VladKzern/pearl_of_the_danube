@@ -399,3 +399,9 @@
     font-size: 20px;
   }
 }
+
+@media (min-height: 320px) and (max-height: 720px) {
+  .mobileMenu {
+    padding-top: 80px;
+  }
+}
