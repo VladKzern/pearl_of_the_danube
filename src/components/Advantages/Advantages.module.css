@@ -89,7 +89,6 @@
 /* 📱 Мобілка (375px – 924px) */
 @media (max-width: 924px) {
   .title {
-    top: 80px;
     font-size: 20px;
   }
 
@@ -116,7 +115,7 @@
 /* 📟 Планшет (925px – 1439px) */
 @media (min-width: 925px) and (max-width: 1439px) {
   .title {
-    top: 100px;
+    top: 120px;
     font-size: 26px;
   }
 
@@ -143,7 +142,7 @@
 /* 🖥 Десктоп (1440px і більше) */
 @media (min-width: 1440px) {
   .title {
-    top: 120px;
+    top: 160px;
     font-size: 32px;
   }
 
