@@ -1,0 +1,44 @@
+.locationSection {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: transparent;
+}
+
+.locationItem {
+  position: relative;
+  overflow: hidden;
+}
+
+.locationItem img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+
+  transform: translateX(20rem);
+  opacity: 0;
+  transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+.locationItem.active img {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}

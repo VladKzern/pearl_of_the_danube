@@ -1,7 +1,9 @@
 import Header from '../Header/Header';
 import Hero from '../Hero/Hero';
-import About from '../About/About'
-import css from '../App/App.module.css'
+import About from '../About/About';
+import Advantages from '../Advantages/Advantages';
+
+import css from '../App/App.module.css';
 
 export default function App() {
 
@@ -22,6 +24,7 @@ export default function App() {
       <Header />
       <div className={css.scrollContainer}>
         <Hero />
+        <Advantages />
         <About />
       </div>
     </>

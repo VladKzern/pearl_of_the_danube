@@ -7,6 +7,7 @@ export default function NavbarDarkExample() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [burgerOpen, setBurgerOpen] = useState(false);
+  const [onAdvantages, setOnAdvantages] = useState(false); 
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,10 +24,29 @@ export default function NavbarDarkExample() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  
+  // ✅ IntersectionObserver для секції Advantages
+  useEffect(() => {
+    const advantagesSection = document.getElementById('advantages');
+    if (!advantagesSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setOnAdvantages(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.3 } // від 30% видимості
+    );
+
+    observer.observe(advantagesSection);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
-    <div className={css.headerContainer}>
+    <div className={`${css.headerContainer} ${onAdvantages ? css.onAdvantages : ''}`}>
       <div className={css.brandContainer}>
         <div className={css.mainTitleLogo}>ПЕРЛИНА</div>
         <div className={css.mainTitleLogo}>ДУНАЮ</div>

@@ -57,6 +57,7 @@
   .contentContainer {
     max-width: 500px;
     margin-left: 60px;
+    max-height: 400px;
   }
 }
 
