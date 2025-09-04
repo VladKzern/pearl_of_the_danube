@@ -32,7 +32,7 @@ export default function Location() {
         marginTop: headerHeight,
         height: `calc(100% - ${headerHeight}px)`,
       }}
-    >
+    id="location">
       <div className={styles.row}>
         {items.slice(0, 2).map((item, i) => (
           <div
