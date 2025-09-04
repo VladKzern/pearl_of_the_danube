@@ -3,19 +3,19 @@ import css from "./Advantages.module.css";
 
 const slides = [
   {
-    src: "/src/assets/img/market.jpg",
+    src: "./src/assets/img/market.jpg",
     text: "Зручне розташування у центрі міста",
   },
   {
-    src: "/src/assets/img/3.webp",
+    src: "./src/assets/img/3.webp",
     text: "Сучасні планування квартир",
   },
   {
-    src: "/src/assets/img/market.jpg",
+    src: "./src/assets/img/market.jpg",
     text: "Надійний девелопер та якісні матеріали",
   },
   {
-    src: "/src/assets/img/market.jpg",
+    src: "./src/assets/img/market.jpg",
     text: "Розвинена інфраструктура поруч",
   },
 ];
