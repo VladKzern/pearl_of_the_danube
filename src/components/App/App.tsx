@@ -2,6 +2,7 @@ import Header from '../Header/Header';
 import Hero from '../Hero/Hero';
 import About from '../About/About';
 import Advantages from '../Advantages/Advantages';
+import Location from '../Location/Location';
 
 import css from '../App/App.module.css';
 
@@ -26,6 +27,7 @@ export default function App() {
         <Hero />
         <Advantages />
         <About />
+        <Location />
       </div>
     </>
   );
