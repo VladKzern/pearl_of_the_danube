@@ -1,21 +1,23 @@
 import { useState } from "react";
+import market from "../../assets/img/market.jpg"
+import flatImg from "../../assets/img/3.webp"
 import css from "./Advantages.module.css";
 
 const slides = [
   {
-    src: "./src/assets/img/market.jpg",
+    src: market,
     text: "Зручне розташування у центрі міста",
   },
   {
-    src: "./src/assets/img/3.webp",
+    src: flatImg,
     text: "Сучасні планування квартир",
   },
   {
-    src: "./src/assets/img/market.jpg",
+    src: market,
     text: "Надійний девелопер та якісні матеріали",
   },
   {
-    src: "./src/assets/img/market.jpg",
+    src: market,
     text: "Розвинена інфраструктура поруч",
   },
 ];
