@@ -11,8 +11,8 @@
 }
 
 .title {
-  margin-top: 120px;
-  font-size: 48px;
+  margin-top: 110px;
+  font-size: 36px;
   font-weight: bold;
   color: white;
   text-shadow:
@@ -146,6 +146,18 @@ span {
   margin-top: 8px;
   color: #333;
 }
+
+.flatSpace {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #333;
+  text-align: center;
+}
+
+.flatSpace span {
+  font-weight: bold;
+}
+
 /* кнопки */
 .navBtn {
   background: none;

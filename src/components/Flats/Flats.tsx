@@ -7,11 +7,11 @@ import kv1b from "../../assets/img/kv1-backside.png";
 import kv2l from "../../assets/img/kv2-left.png";
 
 const images = [
-  { src: kv2m, label: "2-кімнатна (дзеркальна)", category: "2" },
-  { src: kv3, label: "3-кімнатна", category: "3" },
-  { src: kv1i, label: "1-кімнатна (внутрішня)", category: "1" },
-  { src: kv1b, label: "1-кімнатна (тильна сторона)", category: "1" },
-  { src: kv2l, label: "2-кімнатна (ліва)", category: "2" },
+  { src: kv2m, label: "2-кімнатна (дзеркальна)", category: "2", space: 60 },
+  { src: kv3, label: "3-кімнатна", category: "3", space: 71.4 },
+  { src: kv1i, label: "1-кімнатна (внутрішня)", category: "1", space: 34.6 },
+  { src: kv1b, label: "1-кімнатна (тильна сторона)", category: "1", space: 36.7 },
+  { src: kv2l, label: "2-кімнатна (ліва)", category: "2", space: 59.2 },
 ];
 
 export default function Flats() {
@@ -173,6 +173,9 @@ export default function Flats() {
                   <div key={i} className={css.slide} onClick={() => openLightbox(globalIndex)}>
                     <p className={css.flatLabel}>{item.label}</p>
                     <img src={item.src} alt={item.label} />
+                    <p className={css.flatSpace}>
+                      Загальна площа: <span>{item.space} м<sup>2</sup></span>
+                    </p>
                   </div>
                 );
               })}
@@ -190,7 +193,7 @@ export default function Flats() {
         {/* Ціна */}
         <div className={css.priceContainer}>
           <p className={css.string}>
-            Ціна квартири від: <span>420 дол./м<sup>2</sup></span>
+            Ціна квартири від: <span>420&nbsp;$/м<sup>2</sup></span>
           </p>
           <p className={css.string}>
             дійсна до: <span>30.09.2025</span>
