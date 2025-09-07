@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import css from "./Flats.module.css";
 import kv2m from "../../assets/img/kv2-mirror.png";
 import kv3 from "../../assets/img/kv3.png";
@@ -21,6 +21,8 @@ export default function Flats() {
   const [currentCategory, setCurrentCategory] = useState<"all" | "1" | "2" | "3">("all");
   const [fade, setFade] = useState(false);
   const [visibleSlides, setVisibleSlides] = useState(3);
+  const [slideWidth, setSlideWidth] = useState(0);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
   // 🔹 Вирахування кількості слайдів по ширині вікна
   useEffect(() => {
@@ -37,6 +39,23 @@ export default function Flats() {
     updateSlides();
     window.addEventListener("resize", updateSlides);
     return () => window.removeEventListener("resize", updateSlides);
+  }, []);
+
+  useEffect(() => {
+    const updateSlideWidth = () => {
+      if (trackRef.current) {
+        const firstSlide = trackRef.current.querySelector(`.${css.slide}`) as HTMLElement;
+        if (firstSlide) {
+          const style = window.getComputedStyle(firstSlide);
+          const marginRight = parseInt(style.marginRight) || 0; // або твій gap
+          setSlideWidth(firstSlide.offsetWidth + marginRight);
+        }
+      }
+    };
+
+    updateSlideWidth();
+    window.addEventListener("resize", updateSlideWidth);
+    return () => window.removeEventListener("resize", updateSlideWidth);
   }, []);
 
   // Фільтрація по категорії
@@ -144,8 +163,9 @@ export default function Flats() {
           </button>
           <div className={css.sliderWindow}>
             <div
+              ref={trackRef}
               className={`${css.sliderTrack} ${fade ? css.fadeOut : css.fadeIn}`}
-              style={{ transform: `translateX(-${currentIndex * (320 + 20)}px)` }} // 320 ширина + 20 відступ
+              style={{ transform: `translateX(-${currentIndex * slideWidth}px)` }}
             >
               {filteredImages.map((item, i) => {
                 const globalIndex = images.indexOf(item);
