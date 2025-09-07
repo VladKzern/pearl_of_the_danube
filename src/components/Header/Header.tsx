@@ -8,6 +8,7 @@ export default function NavbarDarkExample() {
   const [isMobile, setIsMobile] = useState(false);
   const [burgerOpen, setBurgerOpen] = useState(false);
   const [onAdvantages, setOnAdvantages] = useState(false); 
+  const [onFlats, setOnFlats] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,27 +27,31 @@ export default function NavbarDarkExample() {
 
   // ✅ IntersectionObserver для секції Advantages
   useEffect(() => {
-    const advantagesSection = document.getElementById('advantages');
-    if (!advantagesSection) return;
-
+    const sectionIds = ['advantages', 'flats'];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          setOnAdvantages(entry.isIntersecting);
+          if (entry.target.id === 'advantages') {
+            setOnAdvantages(entry.isIntersecting);
+          }
+          if (entry.target.id === 'flats') {
+            setOnFlats(entry.isIntersecting); // новий state для Flats
+          }
         });
       },
-      { threshold: 0.3 } // від 30% видимості
+      { threshold: 0.3 }
     );
 
-    observer.observe(advantagesSection);
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className={`${css.headerContainer} ${onAdvantages ? css.onAdvantages : ''}`}>
+    <div className={`${css.headerContainer} ${onAdvantages ? css.onAdvantages : ''} ${onFlats ? css.onFlatsVisible : ''}`}>
       <div className={css.brandContainer}>
         <div className={css.mainTitleLogo}>ПЕРЛИНА</div>
         <div className={css.mainTitleLogo}>ДУНАЮ</div>

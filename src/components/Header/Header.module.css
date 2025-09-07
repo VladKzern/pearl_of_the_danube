@@ -367,7 +367,7 @@
 
   .headerContainer {
     max-width: 1600px;
-    padding: 12px 64px 12px 64px;
+    padding: 12px 64px 4px 64px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -408,4 +408,10 @@
 
 .headerContainer.onAdvantages {
   background-color: rgba(160, 18, 21, 0.85);
+}
+
+.onFlatsVisible {
+  background-color: rgba(160, 18, 21, 0.85);
+  transition: background-color 0.3s ease;
+  color: white;
 }
