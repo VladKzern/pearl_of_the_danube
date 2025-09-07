@@ -121,12 +121,10 @@ export default function Flats() {
               <button
                 key={cat}
                 type="button"
-                className={css.specialCategoryBtn}
+                className={`${css.specialCategoryBtn} ${currentCategory === cat ? css.active : ""}`}
                 onClick={() => handleCategoryClick(cat as "all" | "1" | "2" | "3")}
               >
-                {cat === "all"
-                  ? "Всі планування"
-                  : `${cat}-кімнатні`}
+                {cat === "all" ? "Всі планування" : `${cat}-кімнатні`}
               </button>
             ))}
           </div>
