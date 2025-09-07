@@ -77,14 +77,20 @@
 }
 
 .priceContainer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  gap: 12px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  padding: 12px 16px;
 }
 
 .string {
-  color: var(--red);
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+span {
+  color: #a41215;
 }
 
 .slider {
@@ -379,10 +385,40 @@
   .categoryButtons {
     gap: 16px;
   }
+
+  .priceContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: baseline;
+    max-width: 500px;
+    margin-left: auto;
+  }
+
+  .string {
+    display: inline;
+    margin: 0;
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1200px) {
   .sliderWindow {
     max-width: 1000px;
+  }
+
+  .priceContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: baseline;
+    max-width: 500px;
+    margin-left: auto;
+  }
+
+  .string {
+    display: inline;
+    margin: 0;
+    font-size: 16px;
   }
 }
