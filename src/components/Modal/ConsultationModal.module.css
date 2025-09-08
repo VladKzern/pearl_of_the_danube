@@ -1,0 +1,103 @@
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 16px 0 12px;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  text-align: center;
+  margin: 0 auto 20px;
+  max-width: 400px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.labelText {
+  display: inline-flex;
+  align-items: center;
+  /* ✅ вирівнює зірочку */
+  color: var(--black);
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 80px;
+  resize: none;
+  /* 🚫 не дозволяє змінювати розмір */
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radioQuestion {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  /* ✅ кружечок на рівні тексту */
+  gap: 8px;
+  font-size: 14px;
+}
+
+.submitBtn {
+  background: #a41215;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.submitBtn:hover {
+  background: #7f0f12;
+}
+
+@media (max-width: 878px) {
+  .modal {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 879px) {
+  .modal {
+    padding: 0 32px;
+    margin: 0 auto;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import ConsultationModal from "../Modal/ConsultationModal";
 import css from "./Flats.module.css";
 import kv2m from "../../assets/img/kv2-mirror.png";
 import kv3 from "../../assets/img/kv3.png";
@@ -23,6 +24,7 @@ export default function Flats() {
   const [visibleSlides, setVisibleSlides] = useState(3);
   const [slideWidth, setSlideWidth] = useState(0);
   const trackRef = useRef<HTMLDivElement | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // 🔹 Вирахування кількості слайдів по ширині вікна
   useEffect(() => {
@@ -130,6 +132,7 @@ export default function Flats() {
 
   return (
     <section className={css.flats} id="flats">
+      <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className={css.container}>
         <h2 className={css.title}>ВИБІР КВАРТИР</h2>
 
@@ -147,7 +150,7 @@ export default function Flats() {
               </button>
             ))}
           </div>
-          <button type="button" className={css.consultationBtn}>
+          <button type="button" className={css.consultationBtn} onClick={() => setIsModalOpen(true)}>
             КОНСУЛЬТАЦІЯ
           </button>
         </div>
