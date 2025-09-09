@@ -1,7 +1,7 @@
 .fixedButton {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 20px;
+  left: 20px;
   width: 70px;
   height: 70px;
   background: #a41215;
@@ -9,13 +9,12 @@
   border: none;
   border-radius: 8px;
   transform: rotate(45deg);
-  /* робимо ромб */
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s;
+  transition: all 0.6s ease;
   z-index: 2000;
 }
 
@@ -23,7 +22,21 @@
   background: #7f0f12;
 }
 
-/* всередині іконка не повинна бути повернута */
 .fixedButton svg {
   transform: rotate(-45deg);
+}
+
+@media (max-width: 878px) {
+  .fixedButton {
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .centered {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) rotate(45deg);
+  }
 }
