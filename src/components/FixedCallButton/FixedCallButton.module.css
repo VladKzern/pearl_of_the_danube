@@ -1,0 +1,29 @@
+.fixedButton {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  background: #a41215;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transform: rotate(45deg);
+  /* робимо ромб */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+  z-index: 2000;
+}
+
+.fixedButton:hover {
+  background: #7f0f12;
+}
+
+/* всередині іконка не повинна бути повернута */
+.fixedButton svg {
+  transform: rotate(-45deg);
+}

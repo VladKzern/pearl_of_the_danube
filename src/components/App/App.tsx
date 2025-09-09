@@ -4,6 +4,7 @@ import About from '../About/About';
 import Advantages from '../Advantages/Advantages';
 import Location from '../Location/Location';
 import Flats from '../Flats/Flats';
+import FixedCallButton from '../FixedCallButton/FixedCallButton';
 import css from '../App/App.module.css';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
   return (
     <>
       <Header />
+      <FixedCallButton />
       <div className={css.scrollContainer}>
         <Hero />
         <Advantages />
