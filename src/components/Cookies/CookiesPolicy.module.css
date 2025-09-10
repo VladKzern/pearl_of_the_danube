@@ -1,0 +1,18 @@
+.policySection {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../assets/img/1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding: 32px;
+  margin: 80px auto 0;
+  max-width: 800px;
+  color: #fff;
+}

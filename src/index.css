@@ -17,7 +17,13 @@ body {
   background-color: #1c1e1f;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
+  /* ✅ тепер можна скролити */
+}
+
+body.no-scroll {
   overflow: hidden;
+  /* ❌ скрол відключається лише на головній */
 }
 
 html {
