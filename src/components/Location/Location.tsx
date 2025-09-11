@@ -3,14 +3,16 @@ import styles from "./Location.module.css";
 import { useHeaderHeight } from "../Header/useHeaderHeight"; 
 import market from "../../assets/img/market.jpg";
 import flatImg from "../../assets/img/3.webp";
-import school from "../../assets/img/school.jpg";
+import school from "../../assets/img/school_desktop.jpg";
+import autostation from "../../assets/img/avtostantsiia-3.webp";
+import kindergarden from "../../assets/img/kindergarden_desktop.jpg"
 
 const items = [
-  { src: market, label: "Автостанція" },
+  { src: autostation, label: "Автостанція" },
   { src: market, label: "Міський ринок" },
   { src: flatImg, label: "АТБ" },
   { src: school, label: "Школа" },
-  { src: school, label: "Дитячий садок" },
+  { src: kindergarden, label: "Дитячий садок" },
 ];
 
 export default function Location() {
