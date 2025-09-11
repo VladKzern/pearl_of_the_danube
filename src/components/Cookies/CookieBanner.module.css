@@ -3,7 +3,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #1c1e1f;
+  background: rgba(28, 30, 31, 0.9);
+  /* прозорий фон */
   color: white;
   padding: 16px;
   display: flex;
@@ -16,6 +17,12 @@
 .link {
   color: #fbc88e;
   text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .button {
@@ -31,4 +38,15 @@
 
 .button:hover {
   background: #7f0f12;
+}
+
+.close {
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

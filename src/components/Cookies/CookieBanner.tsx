@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { IoMdClose } from "react-icons/io";
 
 import css from "./CookieBanner.module.css";
 
@@ -18,20 +19,30 @@ export default function CookieBanner() {
     setVisible(false);
   };
 
+  const handleClose = () => {
+    setVisible(false);
+  };
+
   if (!visible) return null;
 
   return (
     <div className={css.banner}>
       <p>
-        Ми використовуємо cookie для покращення вашого досвіду. 
+        Ми використовуємо cookie для комфортної роботи сайту. 
         Детальніше читайте у{" "}
         <Link to="/cookiespolicy" className={css.link}>
           політиці cookie
         </Link>.
       </p>
-      <button onClick={handleAccept} className={css.button}>
-        Погоджуюсь
-      </button>
+
+      <div className={css.actions}>
+        <button onClick={handleAccept} className={css.button}>
+          Погоджуюсь
+        </button>
+        <button onClick={handleClose} className={css.close}>
+          <IoMdClose size={20} />
+        </button>
+      </div>
     </div>
   );
 }

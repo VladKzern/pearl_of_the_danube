@@ -2,14 +2,16 @@ import { useState, useEffect, useRef } from "react";
 import { Phone } from "lucide-react";
 import ConsultationModal from "../Modal/ConsultationModal";
 import css from "./FixedCallButton.module.css";
+import { useCookieBanner } from "../../hooks/useCookieBanner";
 
 export default function FixedCallButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInFlats, setIsInFlats] = useState(false);
   const flatsRef = useRef<HTMLElement | null>(null);
+  const { isBannerVisible } = useCookieBanner();
 
   useEffect(() => {
-    flatsRef.current = document.getElementById("flats"); // id секції Flats
+    flatsRef.current = document.getElementById("flats");
 
     if (!flatsRef.current) return;
 
@@ -19,7 +21,7 @@ export default function FixedCallButton() {
           setIsInFlats(entry.isIntersecting);
         });
       },
-      { threshold: 0.4 } // коли 40% секції видно на екрані
+      { threshold: 0.4 }
     );
 
     observer.observe(flatsRef.current);
@@ -33,8 +35,10 @@ export default function FixedCallButton() {
     <>
       <button
         className={`${css.fixedButton} ${isInFlats ? css.centered : ""}`}
+        style={{
+          bottom: isBannerVisible ? "100px" : "20px",
+        }}
         onClick={() => setIsOpen(true)}
-        aria-label="Замовити консультацію"
       >
         <Phone size={30} />
       </button>
