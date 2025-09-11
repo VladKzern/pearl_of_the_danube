@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
-import { useCookieBanner } from "../../hooks/useCookieBanner";
+import { useCookieBanner } from "./CookieBannerContext";
 
 import css from "./CookieBanner.module.css";
 
@@ -30,4 +30,5 @@ export default function CookieBanner() {
     </div>
   );
 }
+
 

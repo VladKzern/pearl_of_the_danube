@@ -10,6 +10,7 @@ import FixedCallButton from "../FixedCallButton/FixedCallButton";
 import CookieBanner from "../Cookies/CookieBanner";
 import CookiesPolicy from "../Cookies/CookiesPolicy";
 import Terms from "../Terms/Terms";
+import { CookieBannerProvider } from "../Cookies/CookieBannerContext"; // 👈 правильний шлях
 import css from "../App/App.module.css";
 
 export default function App() {
@@ -24,42 +25,44 @@ export default function App() {
   }, [location.pathname]);
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Header />
-            <FixedCallButton />
-            <div className={css.scrollContainer}>
-              <Hero />
-              <Advantages />
-              <About />
-              <Location />
-              <Flats />
-            </div>
-            <CookieBanner />
-          </>
-        }
-      />
-      <Route
-        path="/cookiespolicy"
-        element={
-          <>
-            <Header />
-            <CookiesPolicy />
-          </>
-        }
-      />
-      <Route
-        path="/terms"
-        element={
-          <>
-            <Header />
-            <Terms />
-          </>
-        }
-      />
-    </Routes>
+    <CookieBannerProvider>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <FixedCallButton />
+              <div className={css.scrollContainer}>
+                <Hero />
+                <Advantages />
+                <About />
+                <Location />
+                <Flats />
+              </div>
+              <CookieBanner />
+            </>
+          }
+        />
+        <Route
+          path="/cookiespolicy"
+          element={
+            <>
+              <Header />
+              <CookiesPolicy />
+            </>
+          }
+        />
+        <Route
+          path="/terms"
+          element={
+            <>
+              <Header />
+              <Terms />
+            </>
+          }
+        />
+      </Routes>
+    </CookieBannerProvider>
   );
 }
