@@ -10,5 +10,14 @@ export function useCookieBanner() {
     }
   }, []);
 
-  return { isBannerVisible, hideBanner: () => setIsBannerVisible(false) };
+  const acceptCookies = () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    setIsBannerVisible(false);
+  };
+
+  const hideBanner = () => {
+    setIsBannerVisible(false);
+  };
+
+  return { isBannerVisible, acceptCookies, hideBanner };
 }
