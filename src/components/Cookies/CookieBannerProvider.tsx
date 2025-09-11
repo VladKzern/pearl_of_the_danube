@@ -1,12 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
-
-interface CookieBannerContextType {
-  isBannerVisible: boolean;
-  acceptCookies: () => void;
-  hideBanner: () => void;
-}
-
-const CookieBannerContext = createContext<CookieBannerContextType | undefined>(undefined);
+import { useEffect, useState } from "react";
+import { CookieBannerContext } from "../../hooks/CookieBannerContext";
 
 export function CookieBannerProvider({ children }: { children: React.ReactNode }) {
   const [isBannerVisible, setIsBannerVisible] = useState(false);
@@ -33,12 +26,5 @@ export function CookieBannerProvider({ children }: { children: React.ReactNode }
     </CookieBannerContext.Provider>
   );
 }
+export { CookieBannerContext };
 
-// eslint-disable-next-line react-refresh/only-export-components
-export function useCookieBanner() {
-  const context = useContext(CookieBannerContext);
-  if (!context) {
-    throw new Error("useCookieBanner must be used within CookieBannerProvider");
-  }
-  return context;
-}

@@ -10,7 +10,7 @@ import FixedCallButton from "../FixedCallButton/FixedCallButton";
 import CookieBanner from "../Cookies/CookieBanner";
 import CookiesPolicy from "../Cookies/CookiesPolicy";
 import Terms from "../Terms/Terms";
-import { CookieBannerProvider } from "../Cookies/CookieBannerContext"; // 👈 правильний шлях
+import { CookieBannerProvider } from "../Cookies/CookieBannerProvider"; // 👈 правильний шлях
 import css from "../App/App.module.css";
 
 export default function App() {

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
-import { useCookieBanner } from "./CookieBannerContext";
-
+import { useCookieBanner } from "../../hooks/useCookieBanner";
 import css from "./CookieBanner.module.css";
 
 export default function CookieBanner() {
@@ -12,7 +11,7 @@ export default function CookieBanner() {
   return (
     <div className={css.banner}>
       <p>
-        Ми використовуємо cookie для комфортної роботи сайту.
+        Ми використовуємо cookie для комфортної роботи сайту. 
         Детальніше читайте у{" "}
         <Link to="/cookiespolicy" className={css.link}>
           політиці cookie
@@ -30,5 +29,6 @@ export default function CookieBanner() {
     </div>
   );
 }
+
 
 

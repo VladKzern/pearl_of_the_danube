@@ -1,23 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { CookieBannerContext } from "../components/Cookies/CookieBannerProvider";
 
 export function useCookieBanner() {
-  const [isBannerVisible, setIsBannerVisible] = useState(false);
-
-  useEffect(() => {
-    const accepted = localStorage.getItem("cookiesAccepted");
-    if (!accepted) {
-      setIsBannerVisible(true);
-    }
-  }, []);
-
-  const acceptCookies = () => {
-    localStorage.setItem("cookiesAccepted", "true");
-    setIsBannerVisible(false);
-  };
-
-  const hideBanner = () => {
-    setIsBannerVisible(false);
-  };
-
-  return { isBannerVisible, acceptCookies, hideBanner };
+  const context = useContext(CookieBannerContext);
+  if (!context) {
+    throw new Error("useCookieBanner must be used within CookieBannerProvider");
+  }
+  return context;
 }
