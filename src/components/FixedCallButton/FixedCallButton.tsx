@@ -37,7 +37,7 @@ export default function FixedCallButton() {
       <button
         className={`${css.fixedButton} ${isInFlats ? css.centered : ""}`}
         style={{
-          bottom: isBannerVisible ? "100px" : "20px", // 👈 тепер працює стабільно
+          bottom: isBannerVisible ? "125px" : "20px",
         }}
         onClick={() => setIsOpen(true)}
         aria-label="Замовити консультацію"
