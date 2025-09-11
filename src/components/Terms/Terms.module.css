@@ -1,7 +1,7 @@
 .terms {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   background-image: url("../../assets/img/6.png");
   background-size: cover;
   background-position: center;
@@ -92,4 +92,11 @@
 .link {
   color: #fbc88e;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 1440px) {
+  .terms {
+    min-height: 100vh;
+  }
+  
 }
