@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { Phone } from "lucide-react";
 import ConsultationModal from "../Modal/ConsultationModal";
-import css from "./FixedCallButton.module.css";
 import { useCookieBanner } from "../../hooks/useCookieBanner";
+import css from "./FixedCallButton.module.css";
 
 export default function FixedCallButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInFlats, setIsInFlats] = useState(false);
   const flatsRef = useRef<HTMLElement | null>(null);
+
   const { isBannerVisible } = useCookieBanner();
 
   useEffect(() => {
@@ -36,9 +37,10 @@ export default function FixedCallButton() {
       <button
         className={`${css.fixedButton} ${isInFlats ? css.centered : ""}`}
         style={{
-          bottom: isBannerVisible ? "125px" : "20px",
+          bottom: isBannerVisible ? "125px" : "20px", // 👈 рухаємо над банером
         }}
         onClick={() => setIsOpen(true)}
+        aria-label="Замовити консультацію"
       >
         <Phone size={30} />
       </button>
@@ -47,4 +49,5 @@ export default function FixedCallButton() {
     </>
   );
 }
+
 
